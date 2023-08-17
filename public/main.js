@@ -1,5 +1,10 @@
 const btn = document.querySelector('button')
 
+try {
+    nonExistentFunction();
+  } catch (error) {
+    console.error(error);
+
 const clickHandler = () => {
     axios
         .get('/api/loan')
