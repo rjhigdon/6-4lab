@@ -11,6 +11,7 @@ var rollbar = new Rollbar({
 })
 
 rollbar.log('hello')
+rollbar.error("there is an error")
 
 try {
     nonExistentFunction();
@@ -19,7 +20,7 @@ try {
     // Expected output: ReferenceError: nonExistentFunction is not defined
     // (Note: the exact output may be browser-dependent)
   }
-  
+
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname, '/public/index.HTML')) })
 
 app.get('/api/loan', (req, res) => {
