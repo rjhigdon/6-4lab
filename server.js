@@ -12,6 +12,11 @@ var rollbar = new Rollbar({
 
 rollbar.log('hello')
 
+try {
+    nonExistentFunction();
+  } catch (error) {
+    console.error(error);
+
 app.get('/', (req, res) => {res.sendFile(path.join(__dirname, '/public/index.HTML')) })
 
 app.get('/api/loan', (req, res) => {
